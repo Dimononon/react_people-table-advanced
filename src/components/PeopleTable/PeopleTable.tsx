@@ -3,7 +3,7 @@ import { useParams, useSearchParams } from 'react-router-dom';
 import { Person } from '../../types';
 import { PersonLink } from '../PersonLink/PersonLink';
 import classNames from 'classnames';
-import { SearchLink } from '../SearchLink';
+import { SearchLink } from '../SearchLink/SearchLink';
 import { useMemo } from 'react';
 
 type Props = {

@@ -3,7 +3,7 @@ import { Loader } from '../../components/Loader';
 import { Person } from '../../types';
 import { getPeople } from '../../api';
 import { PeopleTable } from '../../components/PeopleTable/PeopleTable';
-import { PeopleFilters } from '../../components/PeopleFilters';
+import { PeopleFilters } from '../../components/PeopleFilters/PeopleFilters';
 
 export const PeoplePage: React.FC = () => {
   const [people, setPeople] = useState<Person[]>([]);

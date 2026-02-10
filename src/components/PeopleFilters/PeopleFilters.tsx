@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
-import { SearchLink } from './SearchLink';
+import { SearchLink } from '../SearchLink/SearchLink';
 import classNames from 'classnames';
-import { getSearchWith, SearchParams } from '../utils/searchHelper';
+import { getSearchWith, SearchParams } from '../../utils/searchHelper';
 
 const SORTING_CENTURIES = ['16', '17', '18', '19', '20'];
 
