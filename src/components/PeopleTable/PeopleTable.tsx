@@ -25,12 +25,16 @@ export const PeopleTable: React.FC<Props> = ({ people }) => {
 
     switch (sort) {
       case 'name':
+        normalizedPeople.sort((a, b) => a.name.localeCompare(b.name));
+        break;
       case 'sex':
-        normalizedPeople.sort((a, b) => a[sort].localeCompare(b[sort]));
+        normalizedPeople.sort((a, b) => a.sex.localeCompare(b.sex));
         break;
       case 'born':
+        normalizedPeople.sort((a, b) => a.born - b.born);
+        break;
       case 'died':
-        normalizedPeople.sort((a, b) => a[sort] - b[sort]);
+        normalizedPeople.sort((a, b) => a.died - b.died);
         break;
       default:
         break;
@@ -53,8 +57,8 @@ export const PeopleTable: React.FC<Props> = ({ people }) => {
 
         return (
           normalizedName.includes(normalizedQuery) ||
-          normalizedMother?.includes(normalizedQuery) ||
-          normalizedFather?.includes(normalizedQuery)
+          normalizedMother.includes(normalizedQuery) ||
+          normalizedFather.includes(normalizedQuery)
         );
       });
     }

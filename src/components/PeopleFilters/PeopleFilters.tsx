@@ -13,7 +13,7 @@ export const PeopleFilters = () => {
   const centuries = searchParams.getAll('centuries');
 
   const handleQueryChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newQuery = event.target.value || null;
+    const newQuery = event.target.value.trim() || null;
     const newSearch = getSearchWith(searchParams, { query: newQuery });
 
     setSearchParams(newSearch);
